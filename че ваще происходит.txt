@@ -50,4 +50,64 @@ const start = async () => {                                  асинхронн�
 
 start()
 
+не забываем переходить в сервер с помощью cd server
+
+для запуска нужно прописать: npm run dev 
+нам выдаст: server started on port = 7000
+в браузере пишем localhost:7000
+получим: cannnot get
+
+создали 2 папки controllers и router 
+в controllers создали файл user_controller.js и вписали туда:
+class UserController {
+    async GetUser(req, res, next)
+    {
+        try {
+            res.json("WORKED")
+        } catch(e) {}
+    }
+}
+
+module.exports = new UserController();
+
+в router файл index.js в котором:
+const Router = require("express").Router;
+const router = Router();
+
+const users = require("../controllers/user_controller");
+router.get("/users", users.GetUser );
+router.post("/adduser");
+router.delete("/deluser");
+router.post("/upduser");
+
+module.exports = router;
+
+
+инзменяем главный index.js на:
+require('dotenv').config();
+const express = require('express');
+const cors = require('cors');
+const cookieParser = require('cookie-parser');
+
+const port = process.env.PORT || 5000;
+const app = express();
+const router = require("./router/index")
+
+app.use(express.json());
+app.use(cookieParser());
+app.use(cors());
+app.use("/api", router);
+
+const start = async() => {
+    try {
+        app.listen(port, () => {
+            console.log("server started at port " + port)
+        })
+    }catch (e) {
+        console.log(e)
+    }
+}
+
+start();
+
 
