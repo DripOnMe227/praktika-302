@@ -1,0 +1,53 @@
++ visual studio code
++ node js и npm
++ postman
+сделал папку praktika и в ней 2 папки ахахахахахахах клиент и сервер 
+
+---далее в visual studio code---
+на сервере создаем файл index.js 
+переходим в cd server и миниацелезируем проект node js командой    npm init -y    получился package.json где храниться вся инфа о проекте
+
+добавляем 3 node модуля(пакета) командой: npm install express(web framework for node.js кторый помогает в разработке web приложений)
+cors(механизм исп доп http запросы заголловки, можете оганичить запросы юзеров, админа от обычного))
+cookie-parser(промежуточное по которое помогает получить данные из куки)
+
+использовали команду npm i nodemon(утилита котороая помогает в перезапуске приложения после изменения, тип тебе не надо будет ручками перезапускать самому)
+--save-dev(только для developera)
+
+все устновление пакеты можно проверить в package.json в категории dependencies
+
+в package.json в разделе scripts изменили test на "dev": "nodemon index.js"
+
+в index.js пишем: const express = require('express');
+const = тип данных(не изменияемые)
+express = наименование
+require = тип импоритровать
+в () = импортировали библиотеку express
+ 
+ тоже самое делаем c cors и cookieParser
+
+ скачиваем npm i env
+ на сервере создаем файл .env(это конфигурационный файл, конфиг проекта)
+пишем там порт который будут слушать: PORT = 7000
+
+в index.js сверху добавляем:
+require('.env').config();
+const express = require('express');
+const cors = require('cors');
+const cookieParser = require('cookie-parser');
+
+const PORT = process.env.PORT || 5000;                           
+const app = express();                                       объявление конструктора для экспресса
+const start = async () => {                                  асинхронная(в один промежуток несколько пользоателей могут испольовать одновременно) функиция старт
+    try {                                                    попытаться послушать порт
+        app.listen(PORT, () =>                                   
+            console.log(`server started on port = ${PORT}`))     
+    }                                                            
+    catch (e) {                                              если есть, отловит ошибку в коде и покажет в консоль
+        console.log(e)                                           
+    }
+}
+
+start()
+
+
