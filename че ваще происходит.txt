@@ -114,7 +114,7 @@ start();
 
 
 выполняем команду в папке сервер: 
-npm install prisma --save-dev
+качаем призму npm install prisma --save-dev
 npx prisma init --datasource-provider postgresql
 в файле .env DATABASE_URL изминяем на: DATABASE_URL="postgresql://test:password@postgres.vm:5432/MaximAntoshin?schema=public"
 вместо mydb свое фи на англ
