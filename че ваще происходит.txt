@@ -111,3 +111,36 @@ const start = async() => {
 start();
 
 
+
+
+выполняем команду в папке сервер: 
+npm install prisma --save-dev
+npx prisma init --datasource-provider postgresql
+в файле .env DATABASE_URL изминяем на: DATABASE_URL="postgresql://test:password@postgres.vm:5432/MaximAntoshin?schema=public"
+вместо mydb свое фи на англ
+
+в папке prisma в файле schema.prisma создаем моделли данных для пользователей и переферии:
+model User {
+  id String @id @default(uuid())
+  firstName String 
+  lastName String
+  email String
+  numberPhone String
+  position String
+  jobPlace String
+  aboutPC PC[]
+}
+
+model PC {
+  id String @id @default(uuid())
+  motherboard String
+  processor String
+  videocard String
+  RAM String
+  keyboard String
+  monitor String
+  user User @relation(fields:[userid], references: [id])
+  userid String
+}
+
+мигрируем это все с помощью команды: npx prisma migrate dev --name init
