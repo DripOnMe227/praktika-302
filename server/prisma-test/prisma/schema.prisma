@@ -32,3 +32,4 @@ model PC {
   user User @relation(fields:[userid], references: [id])
   userid String
 }
+
