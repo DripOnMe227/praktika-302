@@ -144,3 +144,52 @@ model PC {
 }
 
 мигрируем это все с помощью команды: npx prisma migrate dev --name init
+
+
+
+
+000000000000000000user service старый:
+const prisma = new PrismaClient()
+class UserService {
+  async createUser(req, res, next)
+  {
+      try {
+          const user = await prisma.user.create({
+            data:{
+              id: "e20a434e-f3e4-11ed-a05b-0242ac120003", 
+              firstName: "kirill", 
+              lastName: "cursed",
+              email: "qwerty@mail.ru",
+              numberPhone: "7921 1488 69 24",
+              position: "228",
+              jobPlace: "kick.com",
+            }
+          })
+      } catch(e) {}
+  }
+}
+module.exports = new UserService(); 
+000000000000000000
+
+000000000000000000user controllers старый
+module.exports = new UserController();
+class UserController {    
+    async CreateUser(req, res, next)
+    {
+        try {
+            const user = await prisma.user.create({
+                data:{
+                  id: "e20a434e-f3e4-11ed-a05b-0242ac120003", 
+                  firstName: "kirill", 
+                  lastName: "cursed",
+                  email: "qwerty@mail.ru",
+                  numberPhone: "7921 1488 69 24",
+                  position: "228",
+                  jobPlace: "kick.com",
+                }
+              })
+        } catch(e) {console.log(e)}
+    }
+}
+module.exports = new UserController();
+000000000000000000

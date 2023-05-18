@@ -1,24 +1,12 @@
-const { PrismaClient } = require('@prisma/client')
+const { Prisma, PrismaClient } = require("@prisma/client");
 
-const prisma = new PrismaClient()
-
+const prisma_client = new PrismaClient
 class UserService {
-  async createUser(req, res, next)
+  async GetAllUser()
   {
-      try {
-          const user = await prisma.user.create({
-            data:{
-              id: "e20a434e-f3e4-11ed-a05b-0242ac120003", 
-              firstName: "kirill", 
-              lastName: "cursed",
-              email: "qwerty@mail.ru",
-              numberPhone: "7921 1488 69 24",
-              position: "228",
-              jobPlace: "kick.com",
-            }
-          })
-      } catch(e) {}
+    return prisma_client.user.findMany({});
   }
+
 }
 
-module.exports = new UserService();
+module.exports = new UserService;
