@@ -1,5 +1,5 @@
 const { response } = require('express');
-const userService = require('../services/user_service');
+const userService = require('../services/user_service')
 
 class UserController {
     async GetUser(req, res, next) {
@@ -55,4 +55,4 @@ class UserController {
     }
 }
 
-module.exports = new UserController();
+module.exports = new UserController()
