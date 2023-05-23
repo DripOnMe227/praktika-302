@@ -8,3 +8,5 @@ router.delete("/delpc", pcs.DelPC)
 router.post("/updpc", pcs.UpdatePC)
 
 module.exports = router
+
+//аахвахвахвхах пк роутер а че пк юзер занято было?))))
