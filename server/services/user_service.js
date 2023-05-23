@@ -4,7 +4,8 @@ const prisma_client = new PrismaClient()
 
 class UserService {
 
-    async GetAllUser() {
+    async GetAllUser() 
+    {
         return prisma_client.user.findMany({});
     }
 

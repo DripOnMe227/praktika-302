@@ -2,9 +2,10 @@ const { response } = require('express');
 const userService = require('../services/user_service')
 
 class UserController {
-    async GetUser(req, res, next) {
+    async GetUser(req, res, next) 
+    {
         try {
-            res.json(await user_Service.GetAllUsers())
+            res.json(await userService.GetAllUser())
         } catch (e) {
             res.json({ "error": "EXCEPTION" })
         }
