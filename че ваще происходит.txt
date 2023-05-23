@@ -300,3 +300,19 @@ class UserController {
 
 module.exports = new UserController()
 00000000000000000000
+
+{
+"firstName" : "kirill",
+"lastName" : "bledniy",
+"email" : "asdasd@mail.ru",
+"numberPhone" : "79211243124235",
+"position" : "main guitar",
+"jobPlace" : "poshlaya molli"
+}
+00000
+{
+"id" : "1bdb65ff-a958-4d3a-9820-06c660118984",
+"key" : "numberPhone",
+"val" : "1232353353"
+}
+

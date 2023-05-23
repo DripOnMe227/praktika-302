@@ -14,16 +14,16 @@ CREATE TABLE "User" (
 -- CreateTable
 CREATE TABLE "PC" (
     "id" TEXT NOT NULL,
-    "motherboard" TEXT NOT NULL,
-    "processor" TEXT NOT NULL,
-    "videocard" TEXT NOT NULL,
-    "RAM" TEXT NOT NULL,
-    "keyboard" TEXT NOT NULL,
-    "monitor" TEXT NOT NULL,
-    "userId" TEXT NOT NULL,
+    "motherboard" TEXT,
+    "processor" TEXT,
+    "videocard" TEXT,
+    "RAM" TEXT,
+    "keyboard" TEXT,
+    "monitor" TEXT,
+    "userId" TEXT,
 
     CONSTRAINT "PC_pkey" PRIMARY KEY ("id")
 );
 
 -- AddForeignKey
-ALTER TABLE "PC" ADD CONSTRAINT "PC_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "PC" ADD CONSTRAINT "PC_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE SET NULL ON UPDATE CASCADE;

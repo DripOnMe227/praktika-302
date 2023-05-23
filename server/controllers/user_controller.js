@@ -4,7 +4,7 @@ const userService = require('../services/user_service')
 class UserController {
     async GetUser(req, res, next) {
         try {
-            res.json(await userService.getallusers())
+            res.json(await user_Service.GetAllUsers())
         } catch (e) {
             res.json({ "error": "EXCEPTION" })
         }
@@ -19,38 +19,19 @@ class UserController {
     }
     async DelUser(req, res, next) {
         try {
-            res.json(await userService.deleteUsers())
-        } catch (e) {
-            res.json({ "error": "EXCEPTION" })
+            res.json(await userService.DelUser(req))
+        } catch(e) {
+            console.log(e)
+            res.json({"error": "EXCEPTION"})
         }
     }
-    async UpUser(req, res, next) {
-        const { email, age } = changes
+    async UpdateUser(req, res, next) 
+    {
         try {
-            const user = await prisma.user.update({
-                where: {
-                    id
-                },
-                data: {
-                    email,
-                    profile: {
-                        update: {
-                            age
-                        }
-                    }
-                },
-                select: {
-                    email: true
-                },
-                include: {
-                    profile: true
-                }
-            })
-            return user
-        } catch (e) {
-            res.json(await userService.update(req))
-
-            res.json({ "error": "EXCEPTION" })
+            res.json(await userService.UpdateUser(req))
+        } catch(e) {
+            console.log(e)
+            res.json({"error": "EXCEPTION"})
         }
     }
 }
