@@ -316,3 +316,14 @@ module.exports = new UserController()
 "val" : "1232353353"
 }
 
+00000000000000000
+{
+"motherboard" : "asus",
+"processor" : "intel",
+"videocard" : "nvidia GTX",
+"RAM" : "2TB",
+"keyboard" : "corsair",
+"monitor" : "loc",
+"userId" : "6de43093-2604-4927-9ffe-24b70f124576"
+}0000000000000
+
