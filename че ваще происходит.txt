@@ -325,5 +325,14 @@ module.exports = new UserController()
 "keyboard" : "corsair",
 "monitor" : "loc",
 "userId" : "6de43093-2604-4927-9ffe-24b70f124576"
-}0000000000000
-
+}
+0000000000000
+{
+"firstName" : "alexandr",
+"lastName" : "BY",
+"email" : "zavod@mail.ru",
+"numberPhone" : "7687832",
+"position" : "boss",
+"jobPlace" : "zavod B Y Alexandrov"
+}
+000000000000
