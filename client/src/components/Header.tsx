@@ -1,12 +1,12 @@
 import React from 'react';
-import Search from './Search';
+import SearchBar from "./SearchBar";
 
 const Header = () => {
     return (
         <div className="header">
-            <Search />
-            <span>MAX</span>
-            <button>add</button>
+            <SearchBar/>
+            <span>User panel</span>
+            <button>Добавить</button>
         </div>
     );
 };

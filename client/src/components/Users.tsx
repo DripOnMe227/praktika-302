@@ -1,9 +1,27 @@
 import React from 'react';
+import UserCard from "./UserCard";
 
 const Users = () => {
     return (
-        <div>
-            Users
+        <div className="users">
+            <UserCard/>
+            <UserCard/>
+            <UserCard/>
+            <UserCard/>
+            <UserCard/>
+            <UserCard/>
+            <UserCard/>
+            <UserCard/>
+            <UserCard/>
+            <UserCard/>
+            <UserCard/>
+            <UserCard/>
+            <UserCard/>
+            <UserCard/>
+            <UserCard/>
+            <UserCard/>
+            <UserCard/>
+            <UserCard/>
         </div>
     );
 };
