@@ -5,8 +5,8 @@ const Header = () => {
     return (
         <div className="header">
             <SearchBar/>
-            <span>User panel</span>
-            <button>Добавить</button>
+            <span>Добро Пожаловать</span>
+            <button>Добавить пользователя</button>
         </div>
     );
 };

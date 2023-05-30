@@ -10,7 +10,7 @@ body {
 }
 
 .app {
-  background-color: #F1F4F9;
+  background-image: url("https://images.genius.com/5af1a12cd6cd30fd2e24307c339a5715.1000x1000x1.jpg");
   height: 100vh;
   display: flex;
   align-items: center;
@@ -19,7 +19,7 @@ body {
   .header {
     width: calc(100% - 64px);
     height: 70px;
-    background: #FFFFFF;
+    background: #000000;
     box-shadow: 0px 4px 5px #E9EDF3;
     display: flex;
     align-items: center;
@@ -31,8 +31,8 @@ body {
       height: 52px;
       border: none;
       border-radius: 4px;
-      background: #002CFB;
-      color: white;
+      background: #ffffff;
+      color: rgb(0, 0, 0);
       font-family: 'SanFrancisco';
       font-style: normal;
       font-weight: 500;
@@ -49,7 +49,7 @@ body {
       }
 
       &:hover {
-        background-color: #0024CB;
+        background-color: #000000;
       }
     }
 
@@ -58,19 +58,19 @@ body {
       font-size: 28px;
       font-style: normal;
       font-weight: 400;
-      color: #002CFB;
+      color: #e4e4e4;
     }
 
     .search {
-      width: 480px;
+      width: 270px;
       height: 38px;
-      border: 1px solid #002CFB;
+      border: 1px solid #ffffff;
       border-radius: 48px;
       display: flex;
       align-items: center;
 
       input {
-        color: #122945;
+        color: #000000;
         font-family: 'SanFrancisco';
         font-size: 16px;
         font-style: normal;
@@ -127,14 +127,14 @@ body {
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
-          color: #122945;
-          //padding-left: 24px;
+          color: #ffffff;
+          padding-left: 24px;
         }
       }
 
       .pc_info {
         display: flex;
-        width: 20%;
+        width: 40%;
         justify-content: space-between;
 
         span {
@@ -167,11 +167,12 @@ body {
         button {
           width: 122px;
           height: 40px;
+          margin: 10px;
           font-family: 'SanFrancisco';
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
-          color: #002CFB;
+          color: #f8f8f8;
           border: 1px solid #002CFB;
           border-radius: 4px;
           background-color: white;
